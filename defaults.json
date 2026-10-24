@@ -1,0 +1,72 @@
+[
+  {
+    "name": "CGTN News",
+    "country": "China",
+    "url": "https://www.youtube.com/watch?v=fZqr56lztHw",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/cgtn_news.png"
+  },
+  {
+    "name": "CA Global News",
+    "country": "Canada",
+    "url": "https://list.iptvcat.com/my_list/s/ead2fb1167ebdb6206c39549649c0eb9.m3u8",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/caglobal.png"
+  },
+  {
+    "name": "Fox News",
+    "country": "United States",
+    "url": "https://www.youtube.com/watch?v=C96oohpWBGw",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/fox_news.png"
+  },
+  {
+    "name": "CNA",
+    "country": "Singapore",
+    "url": "https://www.youtube.com/watch?v=XWq5kBlakcQ",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/cna_news.png"
+  },
+  {
+    "name": "Sky News UK",
+    "country": "United Kingdom",
+    "url": "https://www.youtube.com/watch?v=xDWQ3LkccY8",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/sky_news.png"
+  },
+  {
+    "name": "Al Jazeera English",
+    "country": "Qatar",
+    "url": "https://www.youtube.com/watch?v=gCNeDWCI0vo",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/aljazeera_hd.png"
+  },
+  {
+    "name": "France 24 English",
+    "country": "France",
+    "url": "https://www.youtube.com/watch?v=HvZt-nh9sGg",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/france24_news.png"
+  },
+  {
+    "name": "ABC News Live",
+    "country": "Australia",
+    "url": "https://www.youtube.com/watch?v=vOTiJkg1voo",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/abc_news_live.png"
+  },
+  {
+    "name": "DW News",
+    "country": "Germany",
+    "url": "https://www.youtube.com/watch?v=LuKwFajn37U",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/dw_news.png"
+  },
+  {
+    "name": "Euronews",
+    "country": "Europe",
+    "url": "https://www.youtube.com/watch?v=pykpO5kQJ98",
+    "mode": "mpv",
+    "icon": "/root/noob/files/128/euro_news.png"
+  }
+]
