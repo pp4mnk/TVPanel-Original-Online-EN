@@ -1,82 +1,52 @@
-# TVPanel-Original-Online-EN
+#TVPANEL_M3U-1.9.3-EN.tar
 
-TVPanel Original Online — English edition 1.4 — 96px icons
 
-Original-style gtkdialog TV panel with an Internet channel catalogue.
-Six columns and five rows, up to 30 channels per page. Channel buttons
-show icons only, scaled to 96 x 96 pixels, with equal 104 x 104 button
-areas. Names appear as tooltips when hovering. Existing logos
-are copied from /root/noob/files/128 when available. Missing logos use a
-plain television symbol with no letters.
+A **TVPanel M3U 1.9.3 EN — Tested and working**
 
-INSTALL / UPDATE (EasyOS, root):
-Extract the archive, open a terminal inside TVPanel-Original-Online-EN:
+Good news! Version **1.9.3 EN** has now been tested and is working. You can add channels to the panel both through the **+ button** and by importing **M3U/M3U8 playlists**.
+
+This release is **not a PET package**. It is a compressed archive containing the program and an installer.
+
+**Installation on EasyOS**
+
+1. Download the `TVPanel_M3U-1.9.3-EN.tar.gz` archive.
+2. Move it to the `/root` folder in EasyOS.
+3. Extract the archive.
+4. Open the extracted folder and open a terminal there.
+5. Run:
+
+```bash
 sh install.sh
-Requirements: python3, yad, mpv, gtkdialog or gtkdialog3.
-YouTube playback also requires a compatible yt-dlp installation.
-The installer checks dependencies; it does not download them.
+```
 
-This updates the Spanish Online edition in place. Your saved channels
-and catalogue cache are retained. No uninstall is necessary.
-User-provided channel names and existing metadata are kept as saved.
-YAD's built-in system controls may follow your desktop language.
+6. Close any previous TVPanel window and reopen the program. The title should show **TVPanel 1.9.3 EN M3U**.
 
-Installed program: /usr/local/lib/tvpanel-online/
-Command: /usr/local/bin/tvpanel-online
-Menu: Multimedia > TVPanel
-The installer updates noob128_front_end under /root/noob and keeps the
-first original backup as noob128_front_end.before-online. Existing
-shortcuts to that launcher use the updated version.
-The older TVPanel Personal application is separate.
+**What you can do**
 
-USE:
-Click the + icon (Add channels). Search by name and/or country, or leave
-both fields empty to show all. ES/Spain filters Spain; GB/UK/Scotland/
-Edinburgh filters the United Kingdom, not a specific city or region.
-Select a stream and click Watch to play it without saving it.
-Add to panel creates a permanent button. Previous/Next switch pages.
-Remove channel asks for confirmation before removing a saved button.
+- Use the **+ button** to search the online IPTV-org catalogue by channel name or country.
+- Tick one or more channels and click **Add to panel**.
+- Use **Watch** to test the first selected channel before adding it.
+- Import channels from a local **M3U/M3U8 file** or a playlist URL.
+- Select individual channels from a playlist or add all available new entries.
+- Navigate between pages, remove channels and play streams using **mpv**.
+- See the channel name beneath each button, even when no logo is available.
 
-CATALOGUE:
-https://github.com/iptv-org/api
-https://iptv-org.github.io/api/
-Combines channels.json, streams.json, logos.json and countries.json.
-Only mapped HTTP/HTTPS streams are shown; closed channels and channels
-marked as adult by the source are excluded. Multiple quality options may
-exist for one channel. Availability and geographical restrictions vary.
-The panel does not bypass DRM or subscriptions.
+Your existing saved channels and downloaded logos are retained when updating.
 
-Downloaded catalogue data is cached for 24 hours. Refresh catalogue
-requests new data. A previously saved cache is used if a download fails;
-the first download requires Internet access. PNG/JPEG channel logos are
-downloaded when possible when a channel is added.
+**For the technically curious**
 
-DATA / TROUBLESHOOTING:
-~/.config/tvpanel-original/channels.json (saved channels)
-~/.config/tvpanel-original/channels.json.bak (previous list)
-~/.cache/tvpanel-original/ (catalogue and logos)
-~/.config/tvpanel-original/mpv.log (latest player log)
-Screenshots: /files/media/images/TV_panel_screenshots (mpv key: s).
-Save your EasyOS session if running without automatic persistence.
+The issue in the previous release was in the catalogue selection window. When **Add to panel** was clicked, YAD was not returning the selected entries to the Python program, so it reported that no channel had been selected.
 
-RESTORE ORIGINAL PANEL:
-Close TVPanel. Use your file manager to copy the .before-online backup
-over its matching noob128_front_end file. Keep the backup until tested.
+In version 1.9.3, the catalogue uses a YAD checklist with `--always-print-result`, allowing the selected channel IDs to be returned when the **Add to panel** button is used. The Python code then checks those IDs, skips streams already present in the panel and saves the new entries.
 
-CREDITS:
-The supplied original panel credits Lobster, ETP and Barry Kauler.
-This edition recreates its gtkdialog layout and adds a Python catalogue
-manager. The online catalogue is supplied by IPTV-org.
+The channel list is stored in:
 
-VALIDATION:
-English labels and installer syntax checked. Saved-channel compatibility
-and generated gtkdialog structure checked. GUI playback has not been
-retested on EasyOS in this environment.
+```text
+~/.config/tvpanel-original/channels.json
+```
 
-MINI VERSION:
-The window title must show TVPanel 1.4. All panel controls use icons
-with hover tooltips. Logos use fixed 96px SVG canvases with aspect ratio
-preserved. Words inside an original station logo remain part of its image;
-no channel name labels or generated initials are added.
-Close any previous panel before installing. To open this exact version:
-/usr/local/bin/tvpanel-online
+A backup of the previous list is made when changes are saved. Downloaded PNG/JPEG logos are kept in the configuration folder, and generated icons and catalogue data are cached separately. Channel names remain visible if a logo is unavailable.
+
+The installer checks for **Python 3, YAD, mpv and gtkdialog**, updates the launcher and creates a menu entry. YouTube streams may also require a working **yt-dlp** installation. As always, whether an individual stream plays depends on its source and any geographical or other restrictions.
+
+The original TVPanel is ETP’s work; this version adds the online catalogue, M3U import and user-configurable channel selection. Modifications by **pp4mnk**.
