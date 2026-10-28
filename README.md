@@ -3,6 +3,7 @@
 
 Version 1.9.4 adds **M3U channel previews before adding them to the panel**.
 
+
 - **[b]New Watch button[/b]:** load an M3U/M3U8 playlist, tick a channel and click **Watch** to play it with mpv without saving it.
 - **[b]Keep browsing after previewing[/b]:** the playlist window reopens with your checked selections retained, allowing you to test more channels.
 - **Choose what to save:[b]** use **Add selected** or **Add all**[/b] when ready. Watching alone does not change your saved channel list.
