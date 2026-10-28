@@ -1,3 +1,21 @@
+
+[quote]**[b]TVPanel 1.9.4 EN — Improvements over 1.9.3[/b]**
+
+Version 1.9.4 adds **M3U channel previews before adding them to the panel**.
+
+- **[b]New Watch button[/b]:** load an M3U/M3U8 playlist, tick a channel and click **Watch** to play it with mpv without saving it.
+- **[b]Keep browsing after previewing[/b]:** the playlist window reopens with your checked selections retained, allowing you to test more channels.
+- **Choose what to save:[b]** use **Add selected** or **Add all**[/b] when ready. Watching alone does not change your saved channel list.
+- **Preview existing channels:** channels already on your panel remain available for testing, while duplicate stream URLs are skipped when adding.
+
+If several channels are checked, **[b]Watch plays the first checked channel in playlist order[/b]**.
+
+[b]The + catalogue preview and selection features from 1.9.3 remain available[/b]. Installation is unchanged: extract the archive and run `sh install.sh`. Existing saved channels and logos are preserved.
+
+[b]by pp4mnk[/b].[/quote]
+
+
+-----------------------------------------------------------------------------------------------------------------------
 #TVPANEL_M3U-1.9.3-EN.tar
 
 
